@@ -61,11 +61,11 @@ var app = builder.Build();
 // הפעלת CORS
 app.UseCors("AllowAllOrigins");
 
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+// }
 
 app.UseHttpsRedirection();
 
@@ -143,5 +143,7 @@ app.MapDelete("/items/{id}", async (int id, ILogger<Program> logger) =>
     }, logger, $"מחיקת פריט עם מזהה {id}"));
 
 app.MapGet("/", () => Results.Redirect("/swagger"));
+
+app.MapGet("/",()=>"Auther Api is running")
 
 app.Run();

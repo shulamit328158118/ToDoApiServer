@@ -142,7 +142,7 @@ app.MapDelete("/items/{id}", async (int id, ILogger<Program> logger) =>
         return Results.NoContent();
     }, logger, $"מחיקת פריט עם מזהה {id}"));
 
-app.MapGet("/", () => Results.Redirect("/swagger"));
+// app.MapGet("/", () => Results.Redirect("/swagger"));
 
 app.MapGet("/",()=>"Auther Api is running");
 

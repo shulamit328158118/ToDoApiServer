@@ -144,6 +144,6 @@ app.MapDelete("/items/{id}", async (int id, ILogger<Program> logger) =>
 
 app.MapGet("/", () => Results.Redirect("/swagger"));
 
-app.MapGet("/",()=>"Auther Api is running")
+app.MapGet("/",()=>"Auther Api is running");
 
 app.Run();
